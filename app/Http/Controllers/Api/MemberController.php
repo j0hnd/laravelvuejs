@@ -21,7 +21,6 @@ class MemberController extends Controller
 
     public function edit(User $user)
     {
-        // return MemberResource::collection($user);
         return response()->json([
             'id' => $user->id,
             'name' => $user->name,

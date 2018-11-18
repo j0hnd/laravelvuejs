@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="create-container">
         <div class="alert alert-success" v-if="saved">
             <strong>Success!</strong> New member has been saved successfully.
         </div>
@@ -58,7 +58,12 @@
                     <label class="form-check-label" for="private">Private Account</label>
                 </div>
 
-              <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-link" @click="cancel">Cancel</button>
+                    <!-- <router-link :to="{ name: 'home' }" class="btn btn-link">Cancel</router-link> -->
+
+                </div>
             </form>
         </div>
     </div>
@@ -106,6 +111,11 @@ export default {
                 confirm_password: null,
                 is_private: 0
             }
+        },
+
+        cancel() {
+            // this.$router.go('/');
+            this.$router.push({ name: 'home' });
         }
     }
 }

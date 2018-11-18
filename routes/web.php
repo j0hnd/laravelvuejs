@@ -11,6 +11,6 @@
 |
 */
 
-Route::resource('members', 'MemberController')->only(['index', 'store', 'show']);
+Route::resource('members', 'MemberController')->only(['index']);
 Route::get('/members/create', 'MemberController@create');
 Route::get('/', 'MemberController@index');

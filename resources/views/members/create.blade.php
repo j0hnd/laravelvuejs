@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-<div class="col-12">
+<div class="col-md-12">
     <create></create>
 </div>
 @stop

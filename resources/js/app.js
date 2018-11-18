@@ -10,7 +10,10 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import BootstrapVue from 'bootstrap-vue';
+import VueRouter from 'vue-router';
+
 Vue.use(BootstrapVue);
+Vue.use(VueRouter);
 
 /**
  * The following block of code may be used to automatically register your
@@ -35,6 +38,26 @@ Vue.component('list', require('./components/ListComponent.vue'));
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import Home from './components/ListComponent';
+import Create from './components/CreateComponent';
+
+const router = new VueRouter({
+    mode: 'history',
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Home
+        },
+        {
+            path: '/members/create',
+            name: 'create',
+            component: Create
+        }
+    ]
+});
+
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router
 });
