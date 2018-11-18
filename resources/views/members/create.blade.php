@@ -2,6 +2,6 @@
 
 @section('content')
 <div class="col-12">
-    <first></first>
+    <create></create>
 </div>
 @stop

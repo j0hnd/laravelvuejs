@@ -20,10 +20,8 @@ Vue.use(BootstrapVue);
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('first', require('./components/FirstComponent.vue'));
+Vue.component('create', require('./components/CreateComponent.vue'));
 Vue.component('list', require('./components/ListComponent.vue'));
-// Vue.component('edit', require('./components/EditComponent.vue'));
 
 // const files = require.context('./', true, /\.vue$/i)
 
