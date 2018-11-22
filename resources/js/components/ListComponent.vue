@@ -1,7 +1,14 @@
 <template>
     <div id="">
-        <table class="table table-striped" ref="usersList" v-if="refresh">
-            <thead class="thead-dark">
+        <div class="row">
+            <div class="col-12">
+                <page-heading-component></page-heading-component>
+            </div>
+        </div>
+
+        <div class="row">
+            <table class="table table-striped" ref="usersList" v-if="refresh">
+                <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col-2">Name</th>
@@ -10,9 +17,9 @@
                     <th scope="col">Added On</th>
                     <th scope="col"></th>
                 </tr>
-            </thead>
+                </thead>
 
-            <tbody>
+                <tbody>
                 <tr v-for="member in members">
                     <td> {{ member.id }} </td>
                     <td> {{ member.name }} </td>
@@ -24,8 +31,10 @@
                         <a href="#" id="toggle-remove" @click="remove(member.id)"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
+
 
         <!-- Modal Component -->
         <b-modal ref="editModalRef" hide-footer title="Edit User">
@@ -102,7 +111,14 @@
 </template>
 
 <script>
+    import PageHeadingComponent from './PageHeadingComponent'
+
     export default {
+        name: "ListComponent",
+
+        components: {
+            PageHeadingComponent
+        },
 
         data() {
             return {

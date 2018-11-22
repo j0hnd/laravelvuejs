@@ -71,6 +71,8 @@
 
 <script>
 export default {
+    name: "CreateComponent",
+
     data() {
         return {
             errors: [],
@@ -100,6 +102,9 @@ export default {
         setSuccessMessage() {
             this.reset();
             this.saved = true;
+            setTimeout(function () {
+                window.location.href = '/';
+            }, 500);
         },
 
         reset() {
@@ -115,7 +120,8 @@ export default {
 
         cancel() {
             // this.$router.go('/');
-            this.$router.push({ name: 'home' });
+            // this.$router.push({ name: 'home' });
+            window.location.href = '/';
         }
     }
 }

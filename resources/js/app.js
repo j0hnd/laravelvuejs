@@ -25,6 +25,7 @@ Vue.use(VueRouter);
 
 Vue.component('create', require('./components/CreateComponent.vue'));
 Vue.component('list', require('./components/ListComponent.vue'));
+// Vue.component('page-heading-component', require('./components/PageHeadingComponent'));
 
 // const files = require.context('./', true, /\.vue$/i)
 
